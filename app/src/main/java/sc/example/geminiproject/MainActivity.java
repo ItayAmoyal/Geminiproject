@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String Question1 = editText.getText().toString();
                 if (Question1.isEmpty()) {
-                    textView.setText(BuildConfig.GEMINI_API_KEY+" smother");
+                    textView.setText("Please enter a question");
 
                 }
                 String prompt = " Answer the following question in less then 50 words: " + Question1;
