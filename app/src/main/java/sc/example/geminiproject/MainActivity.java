@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String Question = editText.getText().toString();
-                if (Question.isEmpty()) {
+                String Question1 = editText.getText().toString();
+                if (Question1.isEmpty()) {
                     textView.setText(BuildConfig.GEMINI_API_KEY+" smother");
 
                 }
-                String prompt = " Answer the following question in less then 50 words: " + Question;
+                String prompt = " Answer the following question in less then 50 words: " + Question1;
                 geminiManager.sentTextPrompt(prompt, new GeminiCallback() {
                     @Override
                     public void onSuccess(String result) {
